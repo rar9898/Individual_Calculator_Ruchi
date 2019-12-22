@@ -2,30 +2,40 @@ import math
 
 
 def addition(a, b):
+    a = int(a)
+    b = int(b)
     return a + b
 
 
 def subtraction(a, b):
+    a = int(a)
+    b = int(b)
     return a - b
 
 
 def multiplication(a, b):
+    a = int(a)
+    b = int(b)
     return a * b
 
 
 def division(a, b):
-    if b != 0:
-        return a / b
+    a = int(a)
+    b = int(b)
+    if a != 0:
+        return round(b / a, 7)
     else:
         return "Dividend cannot be zero."
 
 
 def square(a):
+    a = int(a)
     return a * a
 
 
 def squareroot(a):
-    return math.sqrt(a)
+    a = int(a)
+    return round(math.sqrt(a), 8)
 
 
 class Calculator:

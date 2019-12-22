@@ -20,7 +20,7 @@ class MyTestCase(unittest.TestCase):
         for row in test_data:
             x = row['Value 1']
             y = row['Value 2']
-            result = row['Result']
+            result = int(row['Result'])
             self.assertEqual(self.calculator.add(x, y), result)
             self.assertEqual(self.calculator.result, result)
 
@@ -31,7 +31,7 @@ class MyTestCase(unittest.TestCase):
         for row in test_data:
             x = row['Value 1']
             y = row['Value 2']
-            result = row['Result']
+            result = int(row['Result'])
             self.assertEqual(self.calculator.subtract(x, y), result)
             self.assertEqual(self.calculator.result, result)
 
@@ -42,7 +42,7 @@ class MyTestCase(unittest.TestCase):
         for row in test_data:
             x = row['Value 1']
             y = row['Value 2']
-            result = row['Result']
+            result = int(row['Result'])
             self.assertEqual(self.calculator.multiply(x, y), result)
             self.assertEqual(self.calculator.result, result)
 
@@ -53,7 +53,7 @@ class MyTestCase(unittest.TestCase):
         for row in test_data:
             x = row['Value 1']
             y = row['Value 2']
-            result = row['Result']
+            result = float(row['Result'])
             self.assertEqual(self.calculator.divide(x, y), round(result, 7))
             self.assertEqual(self.calculator.result, round(result, 7))
 
@@ -63,7 +63,7 @@ class MyTestCase(unittest.TestCase):
         test_data = CsvReader('./src/Unit Test Square.csv').data
         for row in test_data:
             x = row['Value 1']
-            result = row['Result']
+            result = int(row['Result'])
             self.assertEqual(self.calculator.sqr(x), result)
             self.assertEqual(self.calculator.result, result)
 
@@ -73,7 +73,7 @@ class MyTestCase(unittest.TestCase):
         test_data = CsvReader('./src/Unit Test Square Root.csv').data
         for row in test_data:
             x = row['Value 1']
-            result = row['Result']
+            result = float(row['Result'])
             self.assertEqual(self.calculator.sqrrt(x), round(result, 8))
             self.assertEqual(self.calculator.result, round(result, 8))
 
