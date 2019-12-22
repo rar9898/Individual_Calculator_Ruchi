@@ -1,13 +1,21 @@
+def addition(a, b):
+    return a + b
+
+
+def subraction(a, b):
+    return a - b
 
 
 class Calculator:
     result = 0
 
     def __init__(self):
-        add = 2+2
-        self.result = add;
         pass
 
     def add(self, a, b):
-        c = a + b
-        return c
+        self.result = addition(a, b)
+        return self.result
+
+    def subract(self, a, b):
+        self.result = subraction(a, b)
+        return self.result
