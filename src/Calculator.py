@@ -7,3 +7,7 @@ class Calculator:
         add = 2+2
         self.result = add;
         pass
+
+    def add(self, a, b):
+        c = a + b
+        return c
