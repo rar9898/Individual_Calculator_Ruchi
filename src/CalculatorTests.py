@@ -29,6 +29,14 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.calculator.divide(9, 0), "Dividend cannot be zero.")
         self.assertEqual(self.calculator.result, "Dividend cannot be zero.")
 
+    def test_sqr_method_calculator(self):
+        self.assertEqual(self.calculator.sqr(5), 25)
+        self.assertEqual(self.calculator.result, 25)
+
+    def test_sqrrt_method_calculator(self):
+        self.assertEqual(self.calculator.sqrrt(36), 6)
+        self.assertEqual(self.calculator.result, 6)
+
 
 if __name__ == '__main__':
     unittest.main()

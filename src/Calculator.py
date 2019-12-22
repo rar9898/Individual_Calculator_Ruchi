@@ -1,3 +1,6 @@
+import math
+
+
 def addition(a, b):
     return a + b
 
@@ -15,6 +18,14 @@ def division(a, b):
         return a / b
     else:
         return "Dividend cannot be zero."
+
+
+def square(a):
+    return a * a
+
+
+def squareroot(a):
+    return math.sqrt(a)
 
 
 class Calculator:
@@ -37,4 +48,12 @@ class Calculator:
 
     def divide(self, a, b):
         self.result = division(a, b)
+        return self.result
+
+    def sqr(self, a):
+        self.result = square(a)
+        return self.result
+
+    def sqrrt(self, a):
+        self.result = squareroot(a)
         return self.result
